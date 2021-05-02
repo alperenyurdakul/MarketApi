@@ -1,0 +1,145 @@
+POST http://localhost:3000/api/v1/categories
+Content-Type: application/json
+
+{
+     "name": "Gıda",
+    "image": "gıda.png",
+    "icon":"easda"
+    
+} 
+
+###
+
+GET http://localhost:3000/api/v1/products?categories=60842b7ee558dd1ace2c059f
+Content-Type: application/json
+
+###
+GET http://localhost:3000/api/v1/products/608454c825f92d1f34f63f6e
+Content-Type: application/json
+
+
+###
+
+PUT http://localhost:3000/api/v1/products/6084542c99834c1efe522a7e
+Content-Type: application/json
+
+{
+     "name": "etimsi",
+    "image": "tavuk.png",
+    "brand":"product1 brand",
+    "description":"adsadadad",
+    "richDescription": "asdsad43",
+    "images":"asdad",
+    "price":123,
+    "category":"60842b7ee558dd1ace2c059f",
+    "rating":4,
+    "numReview":22,
+    "isFeatured":true,
+    "countInStock":10
+    
+} 
+
+###
+POST http://localhost:3000/api/v1/products/
+Content-Type: application/json
+
+{
+     "name": "etimsi",
+    "image": "tavuk.png",
+    "brand":"product1 brand",
+    "description":"adsadadad",
+    "richDescription": "asdsad43",
+    "images":"gida.jpg",
+    "price":123,
+    "category":"608b6928a6859323d0fb41bc",
+    "rating":4,
+    "numReview":22,
+    "isFeatured":true,
+    "countInStock":10
+    
+} 
+
+###
+
+DELETE http://localhost:3000/api/v1/products/608454c825f92d1f34f63f6e
+Content-Type: application/json
+
+###
+
+
+GET http://localhost:3000/api/v1/products/get/featured/1
+Content-Type: application/json
+
+###
+GET http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+###
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+    "name":"alperen yurdakul",
+    "phone":"05434456213123",
+    "email":"alperen55@gmail.com",
+    "passwordHash":"1234567",
+    "isAdmin":true,
+    "city":"Samsun",
+    "country":"Türkiye",
+    "apartment":"İstiklal apt.",
+    "zip":"55200",
+    "street":"894.sk"
+
+}
+
+###
+
+GET http://localhost:3000/api/v1/users/60857d2b87ac6a4c8147d932
+Content-Type: application/json
+###
+
+POST http://localhost:3000/api/v1/users/signup
+Content-Type: application/json
+    
+{
+    "email":"alperenyur55@gmail.com",
+    "password":"123456"
+}
+
+###
+
+POST http://localhost:3000/api/v1/orders
+Content-Type: application/json
+
+{
+    "orderItems":[
+        {
+            "quantity":1,
+            "product":"6084542c99834c1efe522a7e"
+        },
+        {
+            "quantity":1,
+            "product":"6084545bae82451f0e991380"
+        }
+    ],
+    "shippingAddress1":"asdadadad",
+    "shippingAddress2":"asdhgdfhdff",
+    "city":"samsun",
+    "zip":"55200",
+    "country":"türkiye",
+    "phone":"5434456213",
+    "user":"60857f2e4d8cdb4d0ffcadbf",
+    "totalPrice":124,
+    "status":"dasdadsad"
+   
+
+}
+
+###
+
+GET http://localhost:3000/api/v1/orders
+Content-Type: application/jsons
+
+###
+GET http://localhost:3000/api/v1/orders/get/totalsales
+Content-Type: application/json
