@@ -31,17 +31,22 @@ const storage = multer.diskStorage({
 const uploadOptions = multer({ storage: storage });
 
 router.get(`/`, async (req, res) => {
-    let filter = {};
-    if (req.query.categories) {
-        filter = { category: req.query.categories.split(',') };
+    try {
+        let filter = {};
+        if (req.query.categories) {
+            filter = { category: req.query.categories.split(',') };
+        }
+    
+        const productList = await Product.find(filter).populate('category');
+    
+        if (!productList) {
+            res.status(500).json({ success: false });
+        }
+        res.send(productList);
+    } catch (err) {
+        console.log("v1", err)
+        res.status(500).json({ err: err });
     }
-
-    const productList = await Product.find(filter).populate('category');
-
-    if (!productList) {
-        res.status(500).json({ success: false });
-    }
-    res.send(productList);
 });
 
 router.get(`/:id`, async (req, res) => {
