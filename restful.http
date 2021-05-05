@@ -14,7 +14,7 @@ GET http://localhost:3000/api/v1/products?categories=60842b7ee558dd1ace2c059f
 Content-Type: application/json
 
 ###
-GET http://localhost:3000/api/v1/products/608454c825f92d1f34f63f6e
+GET http://localhost:3000/api/v1/products/
 Content-Type: application/json
 
 
