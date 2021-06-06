@@ -2,9 +2,9 @@ POST http://localhost:3000/api/v1/categories
 Content-Type: application/json
 
 {
-     "name": "Gıda",
-    "image": "gıda.png",
-    "icon":"easda"
+     "name": "Kağıt Ürünleri",
+    "image": "https://firebasestorage.googleapis.com/v0/b/istiklalmarket-5c468.appspot.com/o/gida1.jpeg?alt=media&token=abfb7d4a-01f8-40dc-a4ae-7b93d6adbe92",
+    "icon":"gida"
     
 } 
 
@@ -44,14 +44,13 @@ POST http://localhost:3000/api/v1/products/
 Content-Type: application/json
 
 {
-     "name": "etimsi",
-    "image": "tavuk.png",
-    "brand":"product1 brand",
-    "description":"adsadadad",
-    "richDescription": "asdsad43",
-    "images":"gida.jpg",
-    "price":123,
-    "category":"608b6928a6859323d0fb41bc",
+     "name": "Baget Tavuk",
+    "images": "gida1.jpeg",
+    "brand":"Banvit",
+    "description":"Günlük KG Baget Tavuk",
+    "richDescription": "Tavuklarımız günlük gelmektedir.",
+    "price":32,
+    "category":"6096f35b6c8f5a8036dbd45f",
     "rating":4,
     "numReview":22,
     "isFeatured":true,
